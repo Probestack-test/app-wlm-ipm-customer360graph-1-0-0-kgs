@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: customer360graph-1-0-0
+  version: 1.0.0
+  description: Operational baseline generated from observed Kong Konnect configuration.
+servers:
+- url: https://customer360-graph.svc.prod.aldermoor.example/graphql
+paths: {}
+x-kong-source:
+  serviceId: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+  snapshotFingerprint: 07cea5136085320a7d1a760a482942009d20bec1206588859bbf39aee15301c0
+  controlPlaneId: edb363b5-777a-445c-a190-5ca0d53c0c12
+x-kong-unmapped-routes:
+- routeId: 58820197-60c4-4078-aada-cf5bfb6e888e
+  routeName: customer360graph-1-0-0--mutationupdatecontactdetails
+  reasons:
+  - METHODLESS
+- routeId: 5dd1a858-363e-4bcd-8814-ca2a015b567a
+  routeName: customer360graph-1-0-0--querycustomer
+  reasons:
+  - METHODLESS
+- routeId: 7605a912-02da-4af2-bab7-3b4622dc86cc
+  routeName: customer360graph-1-0-0--mutationfreezecard
+  reasons:
+  - METHODLESS
+- routeId: 89460d54-5e02-438e-a219-10eefc128f92
+  routeName: customer360graph-1-0-0--queryaccount
+  reasons:
+  - METHODLESS
+- routeId: beaedc35-599c-4f0e-bda6-fc40d5ddfc69
+  routeName: customer360graph-1-0-0--querycustomers
+  reasons:
+  - METHODLESS
+- routeId: d7bd8555-2e19-4c05-803c-fadf3a2d2fe2
+  routeName: customer360graph-1-0-0--querytransactions
+  reasons:
+  - METHODLESS
+- routeId: f115980c-3574-4c82-a60f-090a3ec68ff4
+  routeName: customer360graph-1-0-0--mutationaddservicingnote
+  reasons:
+  - METHODLESS
+- routeId: f3d7f5ec-6c50-403f-a558-f70f82385ee5
+  routeName: customer360graph-1-0-0--querycard
+  reasons:
+  - METHODLESS
