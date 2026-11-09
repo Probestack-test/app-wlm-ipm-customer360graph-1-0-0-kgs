@@ -1,0 +1,940 @@
+_format_version: '3.0'
+_transform: true
+services:
+- connect_timeout: 60000
+  created_at: 1789395628
+  enabled: true
+  host: customer360-graph.svc.prod.aldermoor.example
+  id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+  name: customer360graph-1-0-0
+  path: /graphql
+  port: 443
+  protocol: https
+  read_timeout: 60000
+  retries: 5
+  source: KONG_KONNECT
+  tags:
+  - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+  - migrated-by:forgeshift-wso2-migrator
+  - contact-centre
+  - internal
+  - graphql
+  - customer
+  updated_at: 1789395628
+  write_timeout: 60000
+  routes:
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: 58820197-60c4-4078-aada-cf5bfb6e888e
+    methods:
+    - MUTATION
+    name: customer360graph-1-0-0--mutationupdatecontactdetails
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/updateContactDetails
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:updateContactDetails
+    - wso2-verb:MUTATION
+    updated_at: 1789395628
+    plugins:
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/updateContactDetails
+      created_at: 1789395628
+      enabled: true
+      id: 78a599fb-0c01-4b43-8281-3b7a0748a37e
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 58820197-60c4-4078-aada-cf5bfb6e888e
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: ef45bc0a-f825-4c2c-b7e3-b29682409cbc
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 58820197-60c4-4078-aada-cf5bfb6e888e
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: 5dd1a858-363e-4bcd-8814-ca2a015b567a
+    methods:
+    - QUERY
+    name: customer360graph-1-0-0--querycustomer
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/customer
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:customer
+    - wso2-verb:QUERY
+    updated_at: 1789395628
+    plugins:
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: 6a6c2ec3-3181-4841-aa85-a46750204c3f
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 5dd1a858-363e-4bcd-8814-ca2a015b567a
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/customer
+      created_at: 1789395628
+      enabled: true
+      id: 908be37b-84df-4c6f-bfe6-bc85e7d164ba
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 5dd1a858-363e-4bcd-8814-ca2a015b567a
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: 7605a912-02da-4af2-bab7-3b4622dc86cc
+    methods:
+    - MUTATION
+    name: customer360graph-1-0-0--mutationfreezecard
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/freezeCard
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:freezeCard
+    - wso2-verb:MUTATION
+    updated_at: 1789395628
+    plugins:
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: 2d6c1b8e-8fe7-41d5-9f02-fd2b742342d5
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 7605a912-02da-4af2-bab7-3b4622dc86cc
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/freezeCard
+      created_at: 1789395628
+      enabled: true
+      id: a8e95419-6f3d-43e9-ab90-34e57db74f84
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 7605a912-02da-4af2-bab7-3b4622dc86cc
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: 89460d54-5e02-438e-a219-10eefc128f92
+    methods:
+    - QUERY
+    name: customer360graph-1-0-0--queryaccount
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/account
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:account
+    - wso2-verb:QUERY
+    updated_at: 1789395628
+    plugins:
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/account
+      created_at: 1789395628
+      enabled: true
+      id: 1adb3871-b09c-457f-917e-fef2bc457c0d
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 89460d54-5e02-438e-a219-10eefc128f92
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: f1b04e02-ae54-4c04-87b6-4ad4ea1a16d1
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: 89460d54-5e02-438e-a219-10eefc128f92
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: beaedc35-599c-4f0e-bda6-fc40d5ddfc69
+    methods:
+    - QUERY
+    name: customer360graph-1-0-0--querycustomers
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/customers
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:customers
+    - wso2-verb:QUERY
+    updated_at: 1789395628
+    plugins:
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: 489aa144-f9eb-4a6b-955e-f9c9ef986c14
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: beaedc35-599c-4f0e-bda6-fc40d5ddfc69
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/customers
+      created_at: 1789395628
+      enabled: true
+      id: 71ac0973-824f-4166-b7b6-d5a8babd636c
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: beaedc35-599c-4f0e-bda6-fc40d5ddfc69
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: d7bd8555-2e19-4c05-803c-fadf3a2d2fe2
+    methods:
+    - QUERY
+    name: customer360graph-1-0-0--querytransactions
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/transactions
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:transactions
+    - wso2-verb:QUERY
+    updated_at: 1789395628
+    plugins:
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: 55246330-8908-4997-8853-151283cd4216
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: d7bd8555-2e19-4c05-803c-fadf3a2d2fe2
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/transactions
+      created_at: 1789395628
+      enabled: true
+      id: 65182643-340b-4978-963a-2c2a38b1feea
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: d7bd8555-2e19-4c05-803c-fadf3a2d2fe2
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: f115980c-3574-4c82-a60f-090a3ec68ff4
+    methods:
+    - MUTATION
+    name: customer360graph-1-0-0--mutationaddservicingnote
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/addServicingNote
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:addServicingNote
+    - wso2-verb:MUTATION
+    updated_at: 1789395628
+    plugins:
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/addServicingNote
+      created_at: 1789395628
+      enabled: true
+      id: aca630ea-769f-40c4-9a34-c0bad0ece41a
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: f115980c-3574-4c82-a60f-090a3ec68ff4
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: ebec1055-d4d5-458d-a417-f55708348916
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: f115980c-3574-4c82-a60f-090a3ec68ff4
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  - created_at: 1789395628
+    https_redirect_status_code: 426
+    id: f3d7f5ec-6c50-403f-a558-f70f82385ee5
+    methods:
+    - QUERY
+    name: customer360graph-1-0-0--querycard
+    path_handling: v0
+    paths:
+    - /graphql/customer360/1.0.0/card
+    preserve_host: false
+    protocols:
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    strip_path: false
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-resource:card
+    - wso2-verb:QUERY
+    updated_at: 1789395628
+    plugins:
+    - config:
+        add:
+          body: []
+          headers: []
+          querystring: []
+        append:
+          body: []
+          headers: []
+          querystring: []
+        remove:
+          body: []
+          headers: []
+          querystring: []
+        rename:
+          body: []
+          headers: []
+          querystring: []
+        replace:
+          body: []
+          headers: []
+          querystring: []
+          uri: /graphql/card
+      created_at: 1789395628
+      enabled: true
+      id: 5a334367-c8fc-4d39-acf4-d52f5babeb63
+      name: request-transformer
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: f3d7f5ec-6c50-403f-a558-f70f82385ee5
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+    - config:
+        allow:
+        - wso2-api:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+        always_use_authenticated_groups: false
+        hide_groups_header: true
+        include_consumer_groups: false
+      created_at: 1789395628
+      enabled: true
+      id: 891676ad-6e5e-4c6d-83d4-1626a4bf527e
+      name: acl
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+      route:
+        id: f3d7f5ec-6c50-403f-a558-f70f82385ee5
+      source: KONG_KONNECT
+      tags:
+      - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+      - migrated-by:forgeshift-wso2-migrator
+      - contact-centre
+      - internal
+      - graphql
+      - customer
+      updated_at: 1789395628
+  plugins:
+  - config:
+      error_code: 429
+      error_message: API rate limit exceeded
+      fault_tolerant: true
+      hide_client_headers: false
+      limit_by: consumer
+      minute: 100000
+      policy: local
+      redis:
+        database: 0
+        port: 6379
+        ssl: false
+        ssl_verify: false
+        timeout: 2000
+      redis_database: 0
+      redis_port: 6379
+      redis_ssl: false
+      redis_ssl_verify: false
+      redis_timeout: 2000
+      sync_rate: -1
+    created_at: 1789395628
+    enabled: true
+    id: dc39edc4-1c07-446d-9899-904aa48d1a07
+    name: rate-limiting
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    - wso2-tier:AldermoorInternal
+    updated_at: 1789395628
+  - config:
+      claims_to_verify:
+      - exp
+      cookie_names: []
+      header_names:
+      - authorization
+      key_claim_name: azp
+      maximum_expiration: 0
+      run_on_preflight: true
+      uri_param_names:
+      - jwt
+    created_at: 1789395628
+    enabled: true
+    id: dc849e7d-7527-4ece-8a37-eeae30e38405
+    name: jwt
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
+    service:
+      id: 0dcb5dc1-6998-43c0-9d5c-1fd50b71dfa3
+    source: KONG_KONNECT
+    tags:
+    - wso2-source-id:ace7cb2e-b864-434d-819c-a2ae9462c2bc
+    - migrated-by:forgeshift-wso2-migrator
+    - contact-centre
+    - internal
+    - graphql
+    - customer
+    updated_at: 1789395628
+plugins:
+- config:
+    access:
+    - |
+      -- Apigee path rewrite (apigee-kong-migrator)
+      local route        = kong.router.get_route()
+      local service      = kong.router.get_service()
+      local service_path = (service and service.path) or "/"
+      -- Check for apigee-strip-len tag set on suffix routes during migration
+      local strip_len = nil
+      if route and route.tags then
+        for _, tag in ipairs(route.tags) do
+          if tag:sub(1, 17) == "apigee-strip-len:" then
+            strip_len = tonumber(tag:sub(18))
+            break
+          end
+        end
+      end
+      -- Fall back to route path length if no tag (covers normal routes)
+      if not strip_len then
+        local route_path = (route and route.paths and route.paths[1]) or "/"
+        if route_path:sub(1, 1) == "~" then route_path = route_path:sub(2) end
+        strip_len = #route_path
+      end
+      local incoming = kong.request.get_path()
+      local suffix = "/"
+      if #incoming >= strip_len then
+        suffix = incoming:sub(strip_len + 1)
+      end
+      if suffix == "" then suffix = "/" end
+      local clean_target = service_path:gsub("/+$", "")
+      if suffix:sub(1, 1) ~= "/" then suffix = "/" .. suffix end
+      kong.service.request.set_path(clean_target .. suffix)
+    body_filter: []
+    certificate: []
+    functions: []
+    header_filter: []
+    log: []
+    rewrite: []
+    ws_client_frame: []
+    ws_close: []
+    ws_handshake: []
+    ws_upstream_frame: []
+  created_at: 1790076421
+  enabled: true
+  id: 3ca01165-5e1c-4f82-adba-16cf9582a31f
+  name: pre-function
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  source: KONG_KONNECT
+  tags:
+  - global
+  - apigee-path-rewrite
+  updated_at: 1790938548
+upstreams: []
